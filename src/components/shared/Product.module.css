@@ -53,6 +53,13 @@
     color: #123d75;
 }
 
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 95px;
+}
+
 .addProduct {
     color: #fff;
     background-color: #1a73e8;
@@ -68,4 +75,28 @@
 .addProduct:hover {
     background-color: #123d75;
     transition: all 0.7s;
+}
+
+.cartButton {
+    width: 35px;
+    height: 35px;
+    color: #fff;
+    background-color: #1a73e8;
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 24px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.cartButton:hover {
+    background-color: #123d75;
+    transition: all 0.7s;
+}
+
+.quantityOfProduct {
+    font-size: 20px;
+    font-weight: bold;
 }
