@@ -3,6 +3,9 @@ import React from "react";
 // constexts
 import ProductContextProvider from "./contexts/ProductContextProvider";
 
+// conponents
+import Navbar from "./components/shared/Navbar";
+
 function App() {
 
   const containerStyle = {
@@ -14,6 +17,7 @@ function App() {
   return (
     <div style={containerStyle}>
       <ProductContextProvider>
+        <Navbar />
       </ProductContextProvider>
     </div>
   );
