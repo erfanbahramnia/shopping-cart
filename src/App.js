@@ -1,4 +1,5 @@
 import React from "react";
+import { Routes, Route} from "react-router-dom";
 
 // constexts
 import ProductContextProvider from "./contexts/ProductContextProvider";
@@ -7,6 +8,7 @@ import CartContextProvider from "./contexts/CartContextProvider";
 // conponents
 import Navbar from "./components/shared/Navbar";
 import Store from "./components/Store";
+import ProductDetails from "./components/ProductDetails";
 
 function App() {
 
@@ -18,7 +20,7 @@ function App() {
   const componentsStyle = {
     "width": "100%",
     "display": "flex",
-    "spaceBetween": "center",
+    "justifyContent": "center",
     "alignItems": "center",
   }
 
@@ -29,7 +31,10 @@ function App() {
           <Navbar />
           
           <div style={componentsStyle}>
-            <Store />
+            <Routes>
+              <Route path="/" element={<Store />}/>
+              <Route path="/products/:id" element={<ProductDetails />}/>
+            </Routes>
           </div>
         </CartContextProvider>
       </ProductContextProvider>
