@@ -2,6 +2,7 @@ import React from "react";
 
 // constexts
 import ProductContextProvider from "./contexts/ProductContextProvider";
+import CartContextProvider from "./contexts/CartContextProvider";
 
 // conponents
 import Navbar from "./components/shared/Navbar";
@@ -24,10 +25,13 @@ function App() {
   return (
     <div style={containerStyle}>
       <ProductContextProvider>
-        <Navbar />
-        <div style={componentsStyle}>
-          <Store />
-        </div>
+        <CartContextProvider>
+          <Navbar />
+          
+          <div style={componentsStyle}>
+            <Store />
+          </div>
+        </CartContextProvider>
       </ProductContextProvider>
     </div>
   );
