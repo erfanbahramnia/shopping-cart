@@ -4,9 +4,18 @@ import React from "react";
 import ProductContextProvider from "./contexts/ProductContextProvider";
 
 function App() {
+
+  const containerStyle = {
+    "width": "100%",
+    "minHeight": "100vh",
+    "backgroundColor": "#f7f7f7",
+  }
+
   return (
-    <ProductContextProvider>
-    </ProductContextProvider>
+    <div style={containerStyle}>
+      <ProductContextProvider>
+      </ProductContextProvider>
+    </div>
   );
 }
 
