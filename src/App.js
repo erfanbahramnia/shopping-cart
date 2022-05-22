@@ -9,6 +9,7 @@ import CartContextProvider from "./contexts/CartContextProvider";
 import Navbar from "./components/shared/Navbar";
 import Store from "./components/Store";
 import ProductDetails from "./components/ProductDetails";
+import CartShopping from "./components/CartShopping";
 
 function App() {
 
@@ -33,6 +34,7 @@ function App() {
           <div style={componentsStyle}>
             <Routes>
               <Route path="/" element={<Store />}/>
+              <Route path="/shoppingcart" element={<CartShopping />} />
               <Route path="/products/:id" element={<ProductDetails />}/>
             </Routes>
           </div>
